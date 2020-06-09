@@ -20,7 +20,23 @@ namespace RobotsVsDinosaurs
 
         }
 
-        // member methods (CAN DO)
 
+        // member methods (CAN DO)
+        public void RunBattle()
+        {
+            // use the DinosaurAttack() method to attack the Robots
+            // use the RobotAttack() method to attakc the Dinosaurs
+
+
+            herd.dinosaurOne.DinosaurAttack(fleet.robotOne);
+            herd.dinosaurTwo.DinosaurAttack(fleet.robotTwo);
+            herd.dinosaurThree.DinosaurAttack(fleet.robotThree);
+            
+            fleet.robotOne.RobotAttacks(herd.dinosaurOne);
+            fleet.robotTwo.RobotAttacks(herd.dinosaurTwo);
+            fleet.robotThree.RobotAttacks(herd.dinosaurThree);
+
+
+        }
     }
 }

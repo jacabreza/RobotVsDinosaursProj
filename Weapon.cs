@@ -9,12 +9,14 @@ namespace RobotsVsDinosaurs
     class Weapon
     {
         // member variables (HAS A)
-        public int knife;
+        public string type;
+        public int damage;
 
         // constructor (SPAWNER)
-        public Weapon()
+        public Weapon(string typeOfWeapon)
         {
-            knife = 0;
+            type = typeOfWeapon;
+            damage = 10;
         }
 
         // member methods (CAN DO)
