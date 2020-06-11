@@ -10,13 +10,13 @@ namespace RobotsVsDinosaurs
     {
         // member variables (HAS A)
         public string type;
-        public int damage;
+        public int attackPower;
 
         // constructor (SPAWNER)
         public Weapon(string typeOfWeapon)
         {
             type = typeOfWeapon;
-            damage = 10;
+            attackPower = 100;
         }
 
         // member methods (CAN DO)

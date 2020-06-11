@@ -9,16 +9,24 @@ namespace RobotsVsDinosaurs
     class Herd
     {
         // member variables (HAS A)
-        public Dinosaur dinosaurOne;
+        public Dinosaur dinosaurOne; 
         public Dinosaur dinosaurTwo;
         public Dinosaur dinosaurThree;
+
+        public List<Dinosaur> listOfDinosaurs;
 
         // constructor (SPAWNER)
         public Herd()
         {
-            dinosaurOne = new Dinosaur("dinosaurOne", "Tail");              // member variables ex. name goes in parameters only if they are different
-            dinosaurTwo = new Dinosaur("dinosaurTwo", "Tail");              // member variables ex. name goes in parameters only if they are different
-            dinosaurThree = new Dinosaur("dinosaurThree", "Tail");          // member variables ex. name goes in parameters only if they are different
+            listOfDinosaurs = new List<Dinosaur>();
+
+            listOfDinosaurs.Add(new Dinosaur("dinosaurOne"));
+            listOfDinosaurs.Add(new Dinosaur("dinosaurTwo"));
+            listOfDinosaurs.Add(new Dinosaur("dinosaurThree"));
+
+            //dinosaurOne = new Dinosaur("dinosaurOne");
+            //dinosaurTwo = new Dinosaur("dinosaurTwo");
+            //dinosaurThree = new Dinosaur("dinosaurThree");
 
         }
 

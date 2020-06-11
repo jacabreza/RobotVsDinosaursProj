@@ -12,7 +12,6 @@ namespace RobotsVsDinosaurs
         public string name;
         public int health;
         public int powerLevel;
-        public int attack;
         public Weapon robotsWeapon;
 
         // constructor (SPAWNER)
@@ -22,27 +21,29 @@ namespace RobotsVsDinosaurs
             name = nameOfRobot;
             health = 100;
             powerLevel = 100;
-            attack = 25;
-            robotsWeapon = new Weapon(nameOfWeapon);
+            robotsWeapon = new Weapon(nameOfWeapon);        //ChooseWeaponForRobot();
 
         }
 
         // member methods (CAN DO)
-        public int RobotAttacks(Dinosaur dinosaur)
+        public void RobotAttacks(Dinosaur dinosaur)
         {
             // robotWeapon, attack, powerLevel, dinosaurs and there health
             // robot loses energy from attack 
 
-            int result;
-
-            result = dinosaur.health - attack;          // OR dinosaur.health -= attack;
-            return result;
+            dinosaur.health -= robotsWeapon.attackPower;          
+            
             
             //powerLevel -= attack;
 
-
-
         }
+        //public Weapon ChooseWeaponForRobot()
+        //{
+        //    Console.WriteLine("Type in a name for the weapon you want to use");
+        //    string weapon = Console.ReadLine();
+        //    return robotsWeapon = new Weapon(weapon);
+
+        //}
 
     }
 

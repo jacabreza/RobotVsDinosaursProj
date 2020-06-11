@@ -13,14 +13,24 @@ namespace RobotsVsDinosaurs
         public Robot robotTwo;
         public Robot robotThree;
 
+        public List<Robot> listOfRobots;
+
         // constructor (SPAWNER)
         public Fleet()
         {
-            robotOne = new Robot("RobotOne", "knife");               // member variables ex. name goes in parameters only if they are different
-            robotTwo = new Robot("RobotTwo", "knife");               // member variables ex. name goes in parameters only if they are different
-            robotThree = new Robot("RobotThree", "knife");           // member variables ex. name goes in parameters only if they are different
+            listOfRobots = new List<Robot>();
+
+            listOfRobots.Add(new Robot("RobotOne", "knife"));
+            listOfRobots.Add(new Robot("RobotTwo", "knife"));
+            listOfRobots.Add(new Robot("RobotThree", "knife"));
+
+            //robotOne = new Robot("RobotOne", "knife");
+            //robotTwo = new Robot("RobotTwo", "knife");
+            //robotThree = new Robot("RobotThree", "knife");
 
         }
+
+
 
         // member methods (CAN DO)
 

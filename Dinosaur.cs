@@ -13,30 +13,27 @@ namespace RobotsVsDinosaurs
         public int health;
         public int energy;
         public int attackPower;
-        public Weapon dinosaurWeapon;
+       
 
         // constructor (SPAWNER)
 
-        public Dinosaur(string typeOfDinosaur, string nameOfWeapon)
+        public Dinosaur(string typeOfDinosaur)
         {
             this.type = typeOfDinosaur;
             health = 100;
             energy = 100;
-            attackPower = 25;
-            dinosaurWeapon = new Weapon(nameOfWeapon);
+            attackPower = 100;
+            
 
         }
 
         // member methods (CAN DO)
-        public int DinosaurAttack(Robot robot)
+        public void DinosaurAttack(Robot robot)
         {
             // dinosaurWeapon, attackPower, energyLevel, Robot and there health
             // dinosaur loses energy 
-            int result;
 
-            result = robot.health - attackPower;            // OR robot.health -= attack;
-            return result;
-
+            robot.health -= attackPower;        
             
             // energy -= attackPower;
 
